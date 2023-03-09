@@ -64,10 +64,10 @@ const Home = () => {
         name,
       });
 
-//       if (user.status == true) {
-//         window.location.href = `${user.response.data.authorization_url}`;
-//         console.log(user.response.data.authorization_url);
-//       }
+      //       if (user.status == true) {
+      //         window.location.href = `${user.response.data.authorization_url}`;
+      //         console.log(user.response.data.authorization_url);
+      //       }
     }
   };
 
@@ -96,8 +96,8 @@ const Home = () => {
                 href="#"
                 className="font-medium text-gray-600 hover:text-gray-500"
               >
-                Using two API Endpoints, Intialize Transaction and Verify
-                Transaction
+                Using Paystack API Endpoints, Intialize Transaction, Verify
+                Transaction, List Transactions.
               </a>
             </p>
           </div>
