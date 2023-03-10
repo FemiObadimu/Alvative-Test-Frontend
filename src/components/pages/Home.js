@@ -1,4 +1,4 @@
-import React, { useState, useContext, useLayoutEffect } from "react";
+import React, { useState, useContext } from "react";
 import AuthContext from "../context/auth/authContext";
 // import { LockClosedIcon } from "@heroicons/react/solid";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,10 +9,6 @@ const Home = () => {
   const authContext = useContext(AuthContext);
   const history = useNavigate();
   const { loadUser, user } = authContext;
-
-  useLayoutEffect(() => {
-    // eslint-disable-next-line
-  }, []);
 
   const [users, setUsers] = useState({
     email: "",
@@ -64,10 +60,16 @@ const Home = () => {
         name,
       });
 
-      //       if (user.status == true) {
-      //         window.location.href = `${user.response.data.authorization_url}`;
-      //         console.log(user.response.data.authorization_url);
-      //       }
+      return toast.success("Processing..", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
 
